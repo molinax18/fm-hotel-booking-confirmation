@@ -11,7 +11,7 @@ export default function NavbarMobile() {
     setSelectedValue(value);
 
   return (
-    <nav className="absolute top-[8%] left-0 min-h-[92%] w-screen flex flex-col justify-between p-6">
+    <nav className="absolute top-[9%] left-0 min-h-[91%] w-screen flex flex-col justify-between py-4 px-6 bg-neutral-100">
       <ul className="flex flex-col gap-y-3">
         {NAV_LINKS.map(({ href, value, icon: Icon }, index) => (
           <li
