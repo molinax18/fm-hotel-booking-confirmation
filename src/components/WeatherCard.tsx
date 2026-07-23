@@ -11,7 +11,7 @@ export default function WeatherCard() {
 
       <img
         src={weatherIcon}
-        alt="Weather Icon"
+        alt=""
         aria-hidden="true"
         className="absolute -top-10 -right-5 size-26"
       />
