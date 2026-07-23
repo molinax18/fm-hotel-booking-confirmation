@@ -39,6 +39,6 @@
 
 @layer base {
   body {
-    @apply min-h-screen font-dm-sans text-base bg-neutral-100;
+    @apply min-h-screen font-dm-sans text-base bg-neutral-100 text-neutral-700;
   }
 }
