@@ -8,7 +8,7 @@ export default function WelcomeSection() {
         <p className="uppercase tracking-widest text-xs text-neutral-600 mb-1">
           Booking · Confirmed
         </p>
-        
+
         <h2 className="font-fraunces text-4xl">
           Bienvenue, <span className="italic text-terracotta-600">Lucia.</span>
         </h2>
@@ -16,7 +16,7 @@ export default function WelcomeSection() {
 
       <div className="flex gap-x-2">
         <button className={`button-fill ${buttonStyles}`}>Print receipt</button>
-        
+
         <button className={`button-outline ${buttonStyles}`}>
           Add to calendar
         </button>

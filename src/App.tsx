@@ -2,6 +2,7 @@ import MobileHeader from "./components/MobileHeader";
 import PaymentCard from "./components/PaymentCard";
 import WelcomeCard from "./components/WelcomeCard";
 import WelcomeSection from "./components/WelcomeSection";
+import GuideCards from "./components/GuideCards";
 
 export default function App() {
   return (
@@ -16,6 +17,8 @@ export default function App() {
 
           <PaymentCard className="-rotate-2 shadow-xl shadow-neutral-600/20" />
         </section>
+
+        <GuideCards className="flex flex-col gap-y-4" />
       </main>
     </>
   );
