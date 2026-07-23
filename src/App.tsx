@@ -1,3 +1,9 @@
+import MobileHeader from "./components/MobileHeader";
+
 export default function App() {
-  return <div>App</div>;
+  return (
+    <>
+      <MobileHeader />
+    </>
+  );
 }
