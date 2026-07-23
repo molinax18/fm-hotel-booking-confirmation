@@ -34,5 +34,11 @@
   --font-dm-mono: "DM Mono", serif;
 
   /* General font size */
-  --spacing-font-base: 14px;
+  --text-base: 14px;
+}
+
+@layer base {
+  body {
+    @apply min-h-screen font-dm-sans text-base bg-neutral-100;
+  }
 }

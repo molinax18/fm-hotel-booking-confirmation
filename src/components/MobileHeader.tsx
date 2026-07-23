@@ -3,13 +3,14 @@ import MenuIcon from "@/assets/icon-menu.svg?react";
 import CloseMenu from "@/assets/icon-close.svg?react";
 
 import maisonLogo from "@/assets/logo.svg";
+import NavbarMobile from "./NavbarMobile";
 
 export default function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <header className="flex items-center justify-between p-4">
+    <header className="flex items-center justify-between p-4 border-b border-b-neutral-400">
       <img src={maisonLogo} alt="Maison Soleil Logo" />
 
       <button
@@ -19,6 +20,8 @@ export default function MobileHeader() {
       >
         {isOpen ? <CloseMenu /> : <MenuIcon />}
       </button>
+
+      {isOpen && <NavbarMobile />}
     </header>
   );
 }
