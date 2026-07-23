@@ -20,6 +20,7 @@ export default function NavbarMobile() {
             className={`flex items-center gap-x-2 py-3 px-2 rounded-md font-normal ${selectedValue === value ? "bg-white text-black" : "text-neutral-700"}`}
           >
             <Icon className="text-inherit" />
+            
             <a href={href}>{value}</a>
           </li>
         ))}
@@ -27,6 +28,7 @@ export default function NavbarMobile() {
 
       <div className="flex flex-col gap-y-10">
         <WeatherCard />
+        
         <LocationDetails />
       </div>
     </nav>

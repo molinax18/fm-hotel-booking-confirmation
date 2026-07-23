@@ -1,5 +1,6 @@
-import sun from "@/assets/icon-sun.svg";
 import type { ComponentPropsWithoutRef } from "react";
+
+import sun from "@/assets/icon-sun.svg";
 
 export default function WelcomeCard({
   className,
@@ -12,6 +13,7 @@ export default function WelcomeCard({
     >
       <header className="flex justify-between pt-6 border-t border-dashed border-white/25">
         <span className="uppercase tracking-widest text-xs">Welcome card</span>
+        
         <img src={sun} alt="" aria-hidden="true" />
       </header>
 
@@ -27,6 +29,7 @@ export default function WelcomeCard({
 
       <footer className="flex flex-col gap-y-2 mt-16">
         <span className="uppercase tracking-widest text-xs">Room</span>
+        
         <h3 className="font-fraunces text-xl text-neutral-50">La Garrigue</h3>
       </footer>
     </article>

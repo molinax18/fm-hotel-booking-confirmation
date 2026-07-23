@@ -7,7 +7,7 @@ export default function WeatherCard() {
 
       <strong className="font-fraunces font-normal text-5xl">27°</strong>
 
-      <p className=" text-sm">Sunny · light breeze</p>
+      <p className="text-sm">Sunny · light breeze</p>
 
       <img
         src={weatherIcon}
