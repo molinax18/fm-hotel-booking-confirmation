@@ -3,13 +3,16 @@ import PaymentCard from "./components/PaymentCard";
 import WelcomeCard from "./components/WelcomeCard";
 import WelcomeSection from "./components/WelcomeSection";
 import GuideCards from "./components/GuideCards";
+import Sidebar from "./components/Sidebar";
 
 export default function App() {
   return (
-    <>
-      <MobileHeader />
+    <div className="grid lg:grid-cols-12">
+      <MobileHeader className="lg:hidden" />
 
-      <main className="flex flex-col gap-y-16 p-6">
+      <Sidebar className="hidden lg:grid lg:col-span-2" />
+
+      <main className="flex flex-col gap-y-16 p-6 lg:col-start-3 lg:col-span-full">
         <WelcomeSection />
 
         <section className="space-y-8">
@@ -20,6 +23,6 @@ export default function App() {
 
         <GuideCards className="flex flex-col gap-y-4" />
       </main>
-    </>
+    </div>
   );
 }

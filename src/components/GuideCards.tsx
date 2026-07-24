@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef } from "react";
 import GuideCard from "./GuideCard";
-import WifiField from "./WiFiField";
+import WifiField from "./WifiField";
 
 import KeyIcon from "@/assets/icon-key.svg?react";
 import WifiIcon from "@/assets/icon-wifi.svg?react";

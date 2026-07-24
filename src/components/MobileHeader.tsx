@@ -1,16 +1,22 @@
-import { useState } from "react";
+import { useState, type ComponentPropsWithoutRef } from "react";
 import MenuIcon from "@/assets/icon-menu.svg?react";
 import CloseMenu from "@/assets/icon-close.svg?react";
 import NavbarMobile from "./NavbarMobile";
 
 import maisonLogo from "@/assets/logo.svg";
 
-export default function MobileHeader() {
+export default function MobileHeader({
+  className,
+  ...props
+}: ComponentPropsWithoutRef<"div">) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <header className="flex items-center justify-between p-4 border-b border-b-neutral-400">
+    <header
+      className={`flex items-center justify-between p-4 border-b border-b-neutral-400 ${className ?? ""}`}
+      {...props}
+    >
       <img src={maisonLogo} alt="Maison Soleil Logo" />
 
       <button

@@ -15,13 +15,14 @@ export default function NavbarMobile() {
       <ul className="flex flex-col gap-y-3">
         {NAV_LINKS.map(({ href, value, icon: Icon }, index) => (
           <li
-            onClick={() => newSelectedValue(value)}
             key={index}
             className={`flex items-center gap-x-2 py-3 px-2 rounded-md font-normal ${selectedValue === value ? "bg-white text-black" : "text-neutral-700"}`}
           >
             <Icon className="text-inherit" />
 
-            <a href={href}>{value}</a>
+            <a href={href} onClick={() => newSelectedValue(value)}>
+              {value}
+            </a>
           </li>
         ))}
       </ul>
