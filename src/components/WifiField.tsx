@@ -13,7 +13,7 @@ export default function WifiField({ label, value, onCopy }: WifiFieldProps) {
         {onCopy && (
           <button
             onClick={onCopy}
-            className="rounded-full px-2.5 py-0.5 text-[10px] border border-neutral-400 font-bold tracking-wider text-stone-600 hover:opacity-80 transition-colors uppercase"
+            className="rounded-full px-2.5 py-0.5 text-[10px] border border-neutral-400 font-bold tracking-wider text-stone-600 hover:opacity-80 transition-colors uppercase cursor-pointer active:opacity-40"
           >
             Copy
           </button>

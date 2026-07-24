@@ -3,7 +3,7 @@ const buttonStyles =
 
 export default function WelcomeSection() {
   return (
-    <section className="flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-6 lg:flex-row lg:justify-between">
       <header>
         <p className="uppercase tracking-widest text-xs text-neutral-600 mb-1">
           Booking · Confirmed
@@ -14,12 +14,12 @@ export default function WelcomeSection() {
         </h2>
       </header>
 
-      <div className="flex gap-x-2">
-        <button className={`button-fill ${buttonStyles}`}>Print receipt</button>
-
+      <div className="flex gap-x-2 lg:items-end lg:basis-96 lg:gap-x-6">
         <button className={`button-outline ${buttonStyles}`}>
           Add to calendar
         </button>
+
+        <button className={`button-fill ${buttonStyles}`}>Print receipt</button>
       </div>
     </section>
   );

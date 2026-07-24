@@ -1,4 +1,4 @@
-import { useState, type ComponentPropsWithoutRef } from "react";
+import { useEffect, useState, type ComponentPropsWithoutRef } from "react";
 import MenuIcon from "@/assets/icon-menu.svg?react";
 import CloseMenu from "@/assets/icon-close.svg?react";
 import NavbarMobile from "./NavbarMobile";
@@ -11,6 +11,18 @@ export default function MobileHeader({
 }: ComponentPropsWithoutRef<"div">) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen((prev) => !prev);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
   return (
     <header
