@@ -18,7 +18,7 @@ export default function GuideCard({
 
   return (
     <article
-      className={`rounded-2xl bg-neutral-50 p-6 shadow-sm border border-neutral-200 flex flex-col gap-4 ${className}`}
+      className={`flex flex-col gap-4 p-6 rounded-2xl shadow-sm border border-neutral-200 bg-neutral-50 ${className}`}
       {...props}
     >
       <header className="flex items-center justify-between">

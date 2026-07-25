@@ -1,16 +1,19 @@
 import type { ComponentPropsWithoutRef } from "react";
 import GuideCard from "./GuideCard";
 import WifiField from "./WifiField";
-
 import KeyIcon from "@/assets/icon-key.svg?react";
 import WifiIcon from "@/assets/icon-wifi.svg?react";
 import BreakfastIcon from "@/assets/icon-breakfast.svg?react";
 
 export default function GuideCards({
+  className = "",
   ...props
 }: ComponentPropsWithoutRef<"div">) {
   return (
-    <section {...props}>
+    <section
+      className={`flex flex-col gap-4 lg:flex-row *:flex-1 ${className}`}
+      {...props}
+    >
       <GuideCard
         data={{
           id: "1",

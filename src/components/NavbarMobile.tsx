@@ -16,9 +16,9 @@ export default function NavbarMobile() {
         {NAV_LINKS.map(({ href, value, icon: Icon }, index) => (
           <li
             key={index}
-            className={`flex items-center gap-x-2 py-3 px-2 rounded-md font-normal ${selectedValue === value ? "bg-white text-black outline-2 outline-offset-2 outline-terracotta-600" : "text-neutral-700"}`}
+            className={`flex items-center gap-x-2 py-3 px-2 rounded-md ${selectedValue === value ? "bg-white text-black outline-2 outline-offset-2 outline-terracotta-600" : "text-neutral-700"}`}
           >
-            <Icon className="text-inherit" />
+            <Icon />
 
             <a href={href} onClick={() => newSelectedValue(value)}>
               {value}

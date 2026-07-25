@@ -1,4 +1,4 @@
-export type ThemeColor = "terracotta" | "blue" | "rose";
+export type ThemeColorType = "terracotta" | "blue" | "rose";
 
 export interface GuideCardType {
   id: string;
@@ -6,6 +6,6 @@ export interface GuideCardType {
   category: string;
   title: string;
   subtitle: string;
-  theme: ThemeColor;
+  theme: ThemeColorType;
   icon: React.FC<React.SVGProps<SVGSVGElement>>;
 }

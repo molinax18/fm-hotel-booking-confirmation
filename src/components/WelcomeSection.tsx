@@ -1,11 +1,11 @@
 const buttonStyles =
-  "py-2 px-4 rounded-full flex-1 cursor-pointer transition hover:opacity-75";
+  "py-2 px-4 rounded-full cursor-pointer transition hover:opacity-75";
 
 export default function WelcomeSection() {
   return (
     <section className="flex flex-col gap-y-6 lg:flex-row lg:justify-between">
       <header>
-        <p className="uppercase tracking-widest text-xs text-neutral-600 mb-1">
+        <p className="uppercase tracking-widest mb-1 text-xs text-neutral-600">
           Booking · Confirmed
         </p>
 
@@ -14,7 +14,7 @@ export default function WelcomeSection() {
         </h2>
       </header>
 
-      <div className="flex gap-x-2 lg:items-end lg:basis-96 lg:gap-x-6">
+      <div className="flex gap-x-2 lg:items-end lg:gap-x-6">
         <button className={`button-outline ${buttonStyles}`}>
           Add to calendar
         </button>

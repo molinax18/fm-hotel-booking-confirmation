@@ -19,12 +19,12 @@ export default function App() {
         <WelcomeSection />
 
         <section className="space-y-8 lg:space-y-0 lg:flex lg:gap-x-2 lg:max-w-3xl lg:mx-auto xl:max-w-4xl">
-          <WelcomeCard className="rotate-2 shadow-xl shadow-terracotta-400/30 lg:rotate-4 lg:order-1 lg:flex-1 lg:justify-around" />
+          <WelcomeCard className="rotate-2 lg:rotate-4 lg:order-1 lg:flex-1" />
 
-          <PaymentCard className="-rotate-2 shadow-xl shadow-neutral-600/20 lg:-rotate-4 lg:flex-1" />
+          <PaymentCard className="-rotate-2 lg:-rotate-4 lg:flex-1" />
         </section>
 
-        <GuideCards className="flex flex-col gap-4 lg:flex-row *:flex-1" />
+        <GuideCards />
       </main>
     </div>
   );

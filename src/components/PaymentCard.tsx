@@ -3,12 +3,12 @@ import type { ComponentPropsWithoutRef } from "react";
 import barCode from "@/assets/icon-barcode.svg";
 
 export default function PaymentCard({
-  className,
+  className = "",
   ...props
 }: ComponentPropsWithoutRef<"div">) {
   return (
     <article
-      className={`flex flex-col gap-y-6 p-6 rounded-2xl bg-white ${className ?? ""}`}
+      className={`flex flex-col gap-y-6 p-6 rounded-2xl shadow-xl shadow-neutral-600/20 bg-neutral-50 ${className}`}
       {...props}
     >
       <header className="flex justify-between">

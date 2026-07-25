@@ -2,7 +2,7 @@ import weatherIcon from "@/assets/icon-weather.svg";
 
 export default function WeatherCard() {
   return (
-    <div className="relative overflow-hidden flex flex-col gap-y-2 bg-sun-300 px-3 py-4 rounded-2xl">
+    <div className="relative overflow-hidden flex flex-col gap-y-2 px-3 py-4 rounded-2xl bg-sun-300">
       <span className="uppercase tracking-widest text-xs">Today in cassis</span>
 
       <strong className="font-fraunces font-normal text-5xl">27°</strong>

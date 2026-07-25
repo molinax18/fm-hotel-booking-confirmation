@@ -6,7 +6,7 @@ import NavbarMobile from "./NavbarMobile";
 import maisonLogo from "@/assets/logo.svg";
 
 export default function MobileHeader({
-  className,
+  className = "",
   ...props
 }: ComponentPropsWithoutRef<"div">) {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ export default function MobileHeader({
 
   return (
     <header
-      className={`flex items-center justify-between p-4 border-b border-b-neutral-400 ${className ?? ""}`}
+      className={`flex items-center justify-between p-4 border-b border-b-neutral-400 ${className}`}
       {...props}
     >
       <img src={maisonLogo} alt="Maison Soleil Logo" />

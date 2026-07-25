@@ -3,12 +3,12 @@ import type { ComponentPropsWithoutRef } from "react";
 import sun from "@/assets/icon-sun.svg";
 
 export default function WelcomeCard({
-  className,
+  className = "",
   ...props
 }: ComponentPropsWithoutRef<"div">) {
   return (
     <article
-      className={`flex flex-col gap-y-4 p-6 rounded-2xl bg-linear-to-bl from-terracotta-400 to-terracotta-700 text-neutral-400 ${className ?? ""}`}
+      className={`flex flex-col gap-y-4 p-6 rounded-2xl bg-linear-to-bl from-terracotta-400 to-terracotta-700 text-neutral-400 shadow-xl shadow-terracotta-400/30 lg:justify-around ${className}`}
       {...props}
     >
       <header className="flex justify-between pt-6 border-t border-dashed border-white/25">
@@ -19,7 +19,7 @@ export default function WelcomeCard({
 
       <h2 className="font-fraunces text-xl text-sun-200 leading-10">
         A note from your host, <br />
-        <span className="text-neutral-50 text-4xl italic">Margaux.</span>
+        <span className="text-4xl italic text-neutral-50">Margaux.</span>
       </h2>
 
       <p>

@@ -1,11 +1,11 @@
-import { type ThemeColor } from "@/types/guideCardType";
+import { type ThemeColorType } from "@/types/guideCardType";
 
 export const THEME_STYLES: Record<
-  ThemeColor,
+  ThemeColorType,
   { iconBg: string; text: string }
 > = {
   terracotta: {
-    iconBg: "bg-color-terracotta-700",
+    iconBg: "bg-terracotta-700",
     text: "text-terracotta-700",
   },
   blue: {
