@@ -1,7 +1,7 @@
-import { useState, type ComponentPropsWithoutRef } from "react";
-import { NAV_LINKS, type NavLinksValueType } from "@/constants/navLinks";
+import type { ComponentPropsWithoutRef } from "react";
 import WeatherCard from "./WeatherCard";
 import LocationDetails from "./LocationDetails";
+import NavList from "./NavList";
 
 import maisonLogo from "@/assets/logo.svg";
 
@@ -9,12 +9,6 @@ export default function Sidebar({
   className = "",
   ...props
 }: ComponentPropsWithoutRef<"div">) {
-  const [selectedValue, setSelectedValue] = useState<NavLinksValueType | null>(
-    null
-  );
-  const newSelectedValue = (value: NavLinksValueType) =>
-    setSelectedValue(value);
-
   return (
     <aside
       className={`grid grid-rows-[min-content_1fr_min-content] gap-y-4 py-6 px-4 border-r border-neutral-400 ${className}`}
@@ -25,20 +19,7 @@ export default function Sidebar({
       </header>
 
       <nav>
-        <ul className="flex flex-col gap-y-3">
-          {NAV_LINKS.map(({ href, value, icon: Icon }, index) => (
-            <li
-              key={index}
-              className={`flex items-center gap-x-2 py-3 px-2 rounded-md ${selectedValue === value ? "bg-neutral-50 text-black outline-2 outline-offset-2 outline-terracotta-600" : "text-neutral-700"}`}
-            >
-              <Icon />
-
-              <a href={href} onClick={() => newSelectedValue(value)}>
-                {value}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <NavList />
       </nav>
       <footer className="flex flex-col gap-y-10">
         <WeatherCard />

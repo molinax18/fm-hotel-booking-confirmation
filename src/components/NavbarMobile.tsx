@@ -1,31 +1,11 @@
-import { useState } from "react";
-import { NAV_LINKS, type NavLinksValueType } from "@/constants/navLinks";
 import WeatherCard from "./WeatherCard";
 import LocationDetails from "./LocationDetails";
+import NavList from "./NavList";
 
 export default function NavbarMobile() {
-  const [selectedValue, setSelectedValue] = useState<NavLinksValueType | null>(
-    null
-  );
-  const newSelectedValue = (value: NavLinksValueType) =>
-    setSelectedValue(value);
-
   return (
     <nav className="absolute z-50 top-[9%] left-0 min-h-[91%] w-screen flex flex-col justify-between py-4 px-6 bg-neutral-100">
-      <ul className="flex flex-col gap-y-3">
-        {NAV_LINKS.map(({ href, value, icon: Icon }, index) => (
-          <li
-            key={index}
-            className={`flex items-center gap-x-2 py-3 px-2 rounded-md ${selectedValue === value ? "bg-white text-black outline-2 outline-offset-2 outline-terracotta-600" : "text-neutral-700"}`}
-          >
-            <Icon />
-
-            <a href={href} onClick={() => newSelectedValue(value)}>
-              {value}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <NavList />
 
       <div className="flex flex-col gap-y-10">
         <WeatherCard />
