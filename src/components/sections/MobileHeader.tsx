@@ -26,7 +26,7 @@ export default function MobileHeader({
 
   return (
     <header
-      className={`flex items-center justify-between p-4 border-b border-b-neutral-400 ${className}`}
+      className={`relative flex items-center justify-between overflow-visible p-4 border-b border-b-neutral-400 ${className}`}
       {...props}
     >
       <img src={maisonLogo} alt="Maison Soleil Logo" />
