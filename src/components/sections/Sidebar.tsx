@@ -1,7 +1,7 @@
 import type { ComponentPropsWithoutRef } from "react";
-import WeatherCard from "./WeatherCard";
-import LocationDetails from "./LocationDetails";
-import NavList from "./NavList";
+import WeatherCard from "@/components/WeatherCard";
+import LocationDetails from "@/components/LocationDetails";
+import NavList from "@/components/NavList";
 
 import maisonLogo from "@/assets/logo.svg";
 
@@ -21,6 +21,7 @@ export default function Sidebar({
       <nav>
         <NavList />
       </nav>
+
       <footer className="flex flex-col gap-y-10">
         <WeatherCard />
 

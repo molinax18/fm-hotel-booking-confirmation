@@ -1,7 +1,7 @@
 import { useEffect, useState, type ComponentPropsWithoutRef } from "react";
 import MenuIcon from "@/assets/icon-menu.svg?react";
 import CloseMenu from "@/assets/icon-close.svg?react";
-import NavbarMobile from "./NavbarMobile";
+import NavbarMobile from "@/components/NavbarMobile";
 
 import maisonLogo from "@/assets/logo.svg";
 
